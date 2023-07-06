@@ -11,12 +11,24 @@ public class PepperoniPizza extends PizzaAbstractFactoryPattern{
 
     public void prepare(){
 
-        System.out.println("Preparing " + name);
         dough = ingredientFactory.createDough();
         sauce = ingredientFactory.createSauce();
         cheese = ingredientFactory.createCheese();
         veggies = ingredientFactory.createVeggies();
         pepperoni = ingredientFactory.createPepperoni();
+
+        System.out.print("Preparing " + name + "..." + " Dough -> " + dough +
+                ", Sauce -> " + sauce + ", Cheese -> "+ cheese + ", Pepperoni -> " + pepperoni
+                 + ", Veggies -> ");
+
+        for (int i = 0; i < veggies.length; i++) {
+            System.out.print(veggies[i]);
+            if (i != veggies.length - 1) {
+                System.out.print(", ");
+            }
+        }
+
+        System.out.println();
 
     }
 

@@ -12,11 +12,13 @@ public class ClamPizza extends PizzaAbstractFactoryPattern{
 
     @Override
     public void prepare() {
-        System.out.println("Preparing " + name);
         dough = pizzaIngredientFactory.createDough();
         sauce = pizzaIngredientFactory.createSauce();
         cheese = pizzaIngredientFactory.createCheese();
         clam = pizzaIngredientFactory.createClam();
+
+        System.out.println("Preparing " + name + "..." + " Dough -> " + dough +
+                            ", Sauce -> " + sauce + ", Cheese -> " + cheese + ", Clam -> " + clam);
 
     }
 }
