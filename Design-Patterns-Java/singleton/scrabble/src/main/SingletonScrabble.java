@@ -24,7 +24,7 @@ public class SingletonScrabble {
 
     private SingletonScrabble() { };
 
-    public static SingletonScrabble getInstance(){
+    public static synchronized SingletonScrabble getInstance(){
         if(firstInstance == null){
 
             if(firstThread){
@@ -40,9 +40,16 @@ public class SingletonScrabble {
 
             }
 
-            firstInstance = new SingletonScrabble();
+            synchronized(SingletonScrabble.class){
 
-            Collections.shuffle(firstInstance.letterList);
+                if(firstInstance == null){
+
+                    firstInstance = new SingletonScrabble();
+                    Collections.shuffle(firstInstance.letterList);
+                }
+
+            }
+
         }
 
         return firstInstance;
