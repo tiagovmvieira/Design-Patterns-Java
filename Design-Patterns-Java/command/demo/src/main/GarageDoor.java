@@ -2,27 +2,31 @@ package main;
 
 public class GarageDoor {
 
-    public GarageDoor() {
+    String location;
+
+    public GarageDoor(String location){
+
+        this.location = location;
     }
 
-    public void up() {
-        System.out.println("Garage Door is Open");
+    public void up(){
+        System.out.println(location + " garage Door is Up");
     }
 
-    public void down() {
-        System.out.println("Garage Door is Closed");
+    public void down(){
+        System.out.println(location + " garage Door is Down");
     }
 
-    public void stop() {
-        System.out.println("Garage Door is Stopped");
+    public void stop(){
+        System.out.println(location + " garage Door is Stopped");
     }
 
-    public void lightOn() {
-        System.out.println("Garage light is on");
+    public void lightOn(){
+        System.out.println(location + " garage light is On");
     }
 
-    public void lightOff() {
-        System.out.println("Garage light is off");
+    public void lightOff(){
+        System.out.println(location + " garage light is off");
     }
 
 }

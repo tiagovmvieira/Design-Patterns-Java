@@ -2,8 +2,12 @@ package main;
 
 public class Light {
 
-    public Light(){
+    String location;
+    int level;
 
+    public Light(String location){
+
+        this.location = location;
     }
 
     public void on(){
