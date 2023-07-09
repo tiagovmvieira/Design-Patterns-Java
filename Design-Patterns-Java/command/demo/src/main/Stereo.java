@@ -35,7 +35,7 @@ public class Stereo {
 
     public void setVolume(int volumeValue){
 
-        System.out.println(location + " Stereo volume set to " + volumeValue);
+        System.out.println(location + " stereo volume set to " + volumeValue);
     }
 
 }

@@ -1,18 +1,19 @@
 package main;
 
-public class CeilingFanOffCommand implements Command{
+public class CeilingFanMediumCommand implements Command{
 
     CeilingFan ceilingFan;
     int prevSpeed;
 
-    public CeilingFanOffCommand(CeilingFan ceilingFan){
+    public CeilingFanMediumCommand(CeilingFan ceilingFan){
 
         this.ceilingFan = ceilingFan;
     }
 
     @Override
     public void execute() {
-        ceilingFan.off();
+        prevSpeed = ceilingFan.getSpeed();
+        ceilingFan.medium();
     }
 
     @Override

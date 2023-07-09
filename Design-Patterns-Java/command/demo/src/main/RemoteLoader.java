@@ -17,7 +17,7 @@ public class RemoteLoader {
         LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
         LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
 
-        CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand(ceilingFan);
+        CeilingFanHighCommand ceilingFanOn = new CeilingFanHighCommand(ceilingFan);
         CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
 
         GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand(garageDoor);
@@ -34,13 +34,21 @@ public class RemoteLoader {
         System.out.println(remoteControl);
 
         remoteControl.onButtonWasPushed(0);
+        System.out.println(remoteControl);
         remoteControl.offButtonWasPushed(0);
+        remoteControl.undoButtonWasPushed();
         remoteControl.onButtonWasPushed(1);
+        System.out.println(remoteControl);
         remoteControl.offButtonWasPushed(1);
+        remoteControl.undoButtonWasPushed();
         remoteControl.onButtonWasPushed(2);
+        System.out.println(remoteControl);
         remoteControl.offButtonWasPushed(2);
+        remoteControl.undoButtonWasPushed();
         remoteControl.onButtonWasPushed(3);
+        System.out.println(remoteControl);
         remoteControl.offButtonWasPushed(3);
+        remoteControl.undoButtonWasPushed();
 
     }
 

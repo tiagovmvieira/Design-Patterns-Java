@@ -12,11 +12,11 @@ public class Light {
 
     public void on(){
 
-        System.out.println("Light is On");
+        System.out.println(location + " light is on");
     }
 
     public void off(){
 
-        System.out.println("Light is Off");
+        System.out.println(location + " light is off");
     }
 }
