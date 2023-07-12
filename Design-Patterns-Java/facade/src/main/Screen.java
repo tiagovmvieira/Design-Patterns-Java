@@ -1,15 +1,21 @@
 package main;
 
 public class Screen {
+    String description;
+
+    public Screen(String description){
+
+        this.description = description;
+    }
 
     public void down(){
 
-        System.out.println("Theater Screen going down");
+        System.out.println(description + " going down");
     }
 
     public void up(){
 
-        System.out.println("Theater Screen going up");
+        System.out.println(description + " going up");
     }
 
 }

@@ -1,20 +1,31 @@
 package main;
 
 public class PopcornPopper {
+    String description;
+
+    public PopcornPopper(String description){
+
+        this.description = description;
+    }
 
     public void on(){
 
-        System.out.println("Popcorn Popper on");
+        System.out.println(description + " on");
     }
 
     public void pop(){
 
-        System.out.println("Popcorn Popper popping popcorn!");
+        System.out.println(description + " popping popcorn!");
     }
 
     public void off(){
 
-        System.out.println("Popcorn Popper off");
+        System.out.println(description + " off");
+    }
+
+    public String toString(){
+
+        return description;
     }
 
 }
