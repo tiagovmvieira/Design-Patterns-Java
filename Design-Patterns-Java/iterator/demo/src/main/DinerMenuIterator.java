@@ -1,6 +1,8 @@
 package main;
 
-public class DinerMenuIterator implements Iterator{
+import java.util.Iterator;
+
+public class DinerMenuIterator implements Iterator<MenuItem>{
     MenuItem[] items;
     int position = 0;
 
@@ -29,6 +31,11 @@ public class DinerMenuIterator implements Iterator{
         position++;
 
         return menuItem;
+    }
+
+    public void remove(){
+
+        throw new UnsupportedOperationException("You shouldn't be trying to remove menu items.");
     }
 
 }
