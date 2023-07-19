@@ -3,7 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class SongsOfThe70s{
+public class SongsOfThe70s implements SongIterator{
 
     ArrayList<SongInfo> bestSongs;
 
@@ -12,6 +12,8 @@ public class SongsOfThe70s{
         bestSongs = new ArrayList<SongInfo>();
 
         addSong("Imagine", "John Lennon", 1971);
+        addSong("American Pie", "Don McLean", 1971);
+        addSong("I Will Survive", "Gloria Gaynor", 1979);
     }
 
     public void addSong(String songName, String bandName, int yearReleased){
@@ -22,10 +24,10 @@ public class SongsOfThe70s{
 
     }
 
-    public ArrayList<SongInfo> getBestSongs(){
+    @Override
+    public Iterator createIterator() {
 
-        return bestSongs;
+        return bestSongs.iterator();
     }
-
 }
 

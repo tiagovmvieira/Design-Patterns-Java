@@ -3,7 +3,7 @@ package main;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class SongsOfThe80s {
+public class SongsOfThe80s implements SongIterator{
 
     SongInfo[] bestSongs;
 
@@ -28,9 +28,10 @@ public class SongsOfThe80s {
 
     }
 
-    public SongInfo[] getBestSongs(){
+    @Override
+    public Iterator createIterator() {
 
-        return bestSongs;
+        return Arrays.asList(bestSongs).iterator();
     }
 
 }
