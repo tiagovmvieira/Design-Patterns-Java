@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Objects;
+
 public class AddNumbers implements Chain{
 
     private Chain nextInChain;
@@ -13,7 +15,7 @@ public class AddNumbers implements Chain{
     @Override
     public void calculate(Numbers request) {
 
-        if(request.getCalcWanted() == "add"){
+        if(Objects.equals(request.getCalcWanted(), "add")){
 
             System.out.println(request.getNumber1() + " + " + request.getNumber2() +
                     " = " + (request.getNumber1() + request.getNumber2()));

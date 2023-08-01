@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Objects;
+
 public class MultiplyNumbers implements Chain{
 
     private Chain nextInChain;
@@ -13,7 +15,7 @@ public class MultiplyNumbers implements Chain{
     @Override
     public void calculate(Numbers request) {
 
-        if(request.getCalcWanted() == "mult"){
+        if(Objects.equals(request.getCalcWanted(), "mult")){
 
             System.out.println(request.getNumber1() + " * " + request.getNumber2() +
                     " = " + (request.getNumber1() * request.getNumber2()));
